@@ -1,0 +1,115 @@
+/* تصميم صفحة الوجهات */
+
+/* عنوان الصفحة */
+.page-title-section {
+    position: relative;
+    height: 350px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-white);
+}
+
+.title-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.title-overlay p {
+    font-size: 1.2em;
+}
+
+/* قسم الوجهات الرئيسية */
+.main-destinations {
+    padding: 60px 0;
+    background-color: var(--primary-white);
+}
+
+.main-destinations h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-dark-green);
+    padding: 15px;
+    text-align: center;
+}
+
+.destination-card p {
+    padding: 0 15px 15px;
+    color: var(--secondary-gray);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.explore-button {
+    display: block;
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #e0b800;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title-section {
+        height: 300px;
+    }
+
+    .title-overlay h1 {
+        font-size: 2.5em;
+    }
+
+    .title-overlay p {
+        font-size: 1em;
+    }
+}

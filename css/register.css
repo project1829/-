@@ -1,0 +1,90 @@
+/* تصميم صفحة إنشاء حساب */
+
+.register-page {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.register-section {
+    background-color: var(--primary-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.register-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark-green);
+    margin-bottom: 30px;
+}
+
+.register-section .form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.register-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-dark-green);
+    font-weight: bold;
+}
+
+.register-section input[type="text"],
+.register-section input[type="email"],
+.register-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.register-section .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.register-section .submit-button {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.register-section .submit-button:hover {
+    background-color: #e0b800;
+}
+
+.register-section .login-link {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: var(--secondary-gray);
+}
+
+.register-section .login-link a {
+    color: var(--primary-dark-green);
+    text-decoration: underline;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 576px) {
+    .register-section {
+        padding: 30px;
+    }
+
+    .register-section h2 {
+        font-size: 2em;
+    }
+}

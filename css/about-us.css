@@ -1,0 +1,84 @@
+/* تصميم صفحة "من نحن" */
+
+.introduction-section {
+    padding: 80px 0;
+    background-color: var(--primary-white);
+    text-align: center;
+}
+
+.introduction-section h1 {
+    font-size: 3em;
+    color: var(--primary-dark-green);
+    margin-bottom: 20px;
+}
+
+.introduction-section .intro-paragraph {
+    font-size: 1.2em;
+    color: var(--secondary-gray);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-mission-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.vision-mission-section .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vision-mission-section .vision,
+.vision-mission-section .mission {
+    background-color: var(--primary-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    flex-basis: calc(50% - 30px); /* لتوزيع العناصر على نصف العرض مع بعض المسافة */
+}
+
+.vision-mission-section h2 {
+    font-size: 2em;
+    color: var(--primary-gold);
+    margin-bottom: 15px;
+}
+
+.vision-mission-section p {
+    color: var(--secondary-gray);
+    line-height: 1.7;
+}
+
+/* تصميم متجاوب لصفحة "من نحن" */
+@media (max-width: 768px) {
+    .vision-mission-section .vision,
+    .vision-mission-section .mission {
+        flex-basis: 100%; /* جعل العناصر تأخذ عرض كامل على الأجهزة الصغيرة */
+    }
+}
+
+/* تعديل تذييل الصفحة لإضافة شعار رؤية 2030 */
+footer .container {
+    position: relative; /* لجعل عنصر الشعار ذو موقع مطلق بالنسبة له */
+}
+
+footer .saudi-vision-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px; /* يمكنك تعديل الموضع حسب الحاجة */
+    height: 50px; /* يمكنك تعديل الارتفاع حسب حجم الشعار */
+}
+
+footer .saudi-vision-logo img {
+    max-height: 100%;
+}
+
+/* تعديل حقوق النشر لترك مساحة لشعار الرؤية */
+footer .copyright {
+    margin-top: 40px; /* زيادة الهامش لترك مساحة للشعار */
+}

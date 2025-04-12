@@ -1,0 +1,202 @@
+/* تصميم صفحة المفضلة */
+
+body {
+    background-color: var(--light-gray);
+}
+
+.favorites-header {
+    padding: 80px 0;
+    background-color: var(--primary-white);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.favorites-header h1 {
+    font-size: 3em;
+    color: var(--primary-dark-green);
+    margin-bottom: 15px;
+}
+
+.favorites-header .sub-description {
+    font-size: 1.2em;
+    color: var(--secondary-gray);
+}
+
+.filter-section {
+    padding: 20px 0;
+    background-color: var(--primary-white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.filter-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-section .search-bar {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.filter-section .search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.filter-section .filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter-section .filter-group label {
+    margin-left: 5px;
+    font-weight: bold;
+    color: var(--primary-dark-green);
+}
+
+.filter-section .filter-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.favorites-list {
+    padding: 40px 0;
+}
+
+.favorites-list .container {
+    position: relative; /* لجعل عنصر "لا توجد مفضلات" في المنتصف */
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.favorites-grid .favorite-card {
+    background-color: var(--primary-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.favorites-grid .favorite-card:hover {
+    transform: translateY(-5px);
+}
+
+.favorites-grid .favorite-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.favorites-grid .favorite-card .card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.favorites-grid .favorite-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-dark-green);
+    margin-bottom: 5px;
+}
+
+.favorites-grid .favorite-card p {
+    color: var(--secondary-gray);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.favorites-grid .favorite-card .rating {
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.favorites-grid .favorite-card .actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.favorites-grid .favorite-card .actions button,
+.favorites-grid .favorite-card .actions a {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.favorites-grid .favorite-card .actions button:hover,
+.favorites-grid .favorite-card .actions a:hover {
+    color: var(--primary-gold);
+}
+
+.favorites-grid .favorite-card .actions .remove-favorite {
+    color: red;
+}
+
+.empty-favorites {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.empty-favorites img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.empty-favorites p {
+    font-size: 1.2em;
+    color: var(--secondary-gray);
+    margin-bottom: 20px;
+}
+
+.empty-favorites .explore-button {
+    display: inline-block;
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.empty-favorites .explore-button:hover {
+    background-color: #e0b800;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .filter-section .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-section .search-bar {
+        max-width: none;
+    }
+
+    .favorites-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
