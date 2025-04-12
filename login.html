@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول / إنشاء حساب - استكشف السعودية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="simple-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="شعار استكشف السعودية"></a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">استكشاف الوجهات</a></li>
+                    <li id="signup-link"><a href="register.html" class="active-link">إنشاء حساب</a></li>
+                    <li id="login-link"><a href="login.html">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="left-section">
+            <img src="images/login-hero.jpg" alt="معلم سياحي سعودي">
+            <blockquote>"السفر يمنحك قصصًا لا أشياء."</blockquote>
+        </div>
+        <div class="right-section">
+            <div class="form-container" id="login-form">
+                <h2>مرحبًا بك من جديد!</h2>
+                <p class="form-description">سجّل الدخول لمتابعة رحلتك واستكشاف وجهاتك المفضلة.</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required>
+                        <div class="error-message" id="loginEmailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">كلمة المرور:</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
+                        <div class="error-message" id="loginPasswordError"></div>
+                    </div>
+                    <div class="form-actions">
+                        <label class="remember-me">
+                            <input type="checkbox" name="rememberMe"> تذكرني
+                        </label>
+                        <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                    </div>
+                    <button type="submit" class="submit-button">تسجيل الدخول</button>
+                    <div class="switch-form">
+                        ليس لديك حساب؟ <a href="register.html" id="switch-to-signup">أنشئ حساب جديد</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container hidden" id="signup-form">
+                <h2>إنشاء حساب جديد</h2>
+                <p class="form-description">انضم إلى مجتمع المسافرين واكتشف وجهات السعودية بسهولة.</p>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="signupFullName">الاسم الكامل:</label>
+                        <input type="text" id="signupFullName" name="signupFullName" required>
+                        <div class="error-message" id="signupFullNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="signupEmail" name="signupEmail" required>
+                        <div class="error-message" id="signupEmailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">كلمة المرور:</label>
+                        <input type="password" id="signupPassword" name="signupPassword" required>
+                        <div class="error-message" id="signupPasswordError"></div>
+                        <small class="guidance-text">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">تأكيد كلمة المرور:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+                    <button type="submit" class="submit-button">أنشئ حسابك</button>
+                    <div class="switch-form">
+                        لديك حساب بالفعل؟ <a href="#" id="switch-to-login">تسجيل الدخول</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">روابط الخصوصية</a>
+                <a href="#">شروط الاستخدام</a>
+                <a href="contact-us.html">تواصل معنا</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

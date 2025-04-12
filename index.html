@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استكشف السعودية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="شعار استكشف السعودية"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="destinations.html">الوجهات <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="riyadh.html">الرياض</a></li>
+                            <li><a href="alula.html">العُلا</a></li>
+                            <li><a href="jeddah.html">جدة</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="auth-nav">
+                <a href="login.html">تسجيل الدخول</a> / <a href="register.html">إنشاء حساب</a>
+                <a href="favorites.html" class="favorite"><i class="fas fa-heart"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero-image.png" alt="صورة بانورامية للمملكة العربية السعودية">
+        </div>
+        <div class="hero-content">
+            <h1>استكشف سحر المملكة العربية السعودية</h1>
+            <button class="cta-button" id="explore-button">ابدأ رحلتك</button>
+        </div>
+    </section>
+
+    <section class="featured-destinations" id="destinations">
+        <div class="container">
+            <h2>وجهات لا تفوّت</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="images/riyadh.jpg" alt="الرياض">
+                    <h3>الرياض</h3>
+                    <p>عاصمة المملكة العربية السعودية ومركزها الحضري النابض بالحياة.</p>
+                    <a href="riyadh.html" class="explore-more-button">اكتشف المزيد</a>
+                </div>
+                <div class="destination-card">
+                    <img src="images/alula.jpg" alt="العُلا">
+                    <h3>العُلا</h3>
+                    <p>كنوز تاريخية وطبيعية فريدة في قلب الصحراء السعودية.</p>
+                    <a href="alula.html" class="explore-more-button">اكتشف المزيد</a>
+                </div>
+                <div class="destination-card">
+                    <img src="images/jeddah.jpg" alt="جدة">
+                    <h3>جدة</h3>
+                    <p>مدينة ساحلية تجمع بين التاريخ العريق والحداثة العصرية.</p>
+                    <a href="jeddah.html" class="explore-more-button">اكتشف المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities-highlights">
+        <div class="container">
+            <h2>أنشطة تناسب جميع الأذواق</h2>
+            <ul class="activities-list">
+                <li><a href="activities.html?type=cultural">ثقافية</a></li>
+                <li><a href="activities.html?type=entertainment">ترفيهية</a></li>
+                <li><a href="activities.html?type=nature">طبيعية</a></li>
+                <li><a href="activities.html?type=sports">رياضية</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">الوجهات</a></li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">إنشاء حساب</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html

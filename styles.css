@@ -1,0 +1,1222 @@
+/* Reset الأساسي */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif; /* أو 'Tajawal', sans-serif; */
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* الألوان الرئيسية */
+:root {
+    --primary-dark-green: #228B22; /* أخضر داكن */
+    --primary-gold: #FFD700; /* ذهبي */
+    --primary-white: #FFFFFF; /* أبيض */
+    --secondary-gray: #666;
+    --light-gray: #ddd;
+}
+
+/* الرأس (Header) */
+.sticky-header {
+    background-color: var(--primary-white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--primary-dark-green);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-gold);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-white);
+    border: 1px solid var(--light-gray);
+    border-top: none;
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-align: right;
+}
+
+.auth-nav a {
+    text-decoration: none;
+    color: var(--secondary-gray);
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.auth-nav a:hover {
+    color: var(--primary-dark-green);
+}
+
+.auth-nav .favorite {
+    color: var(--primary-gold);
+    font-size: 1.2em;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: var(--primary-dark-green);
+    cursor: pointer;
+}
+
+/* البانر الرئيسي (Hero Section) */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 500px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 1s ease-in-out; /* تأثير تلاشي */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--primary-white);
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e0b800;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* قسم الوجهات البارزة (Featured Destinations) */
+.featured-destinations {
+    padding: 60px 0;
+    background-color: var(--primary-white);
+}
+
+.featured-destinations h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-dark-green);
+    padding: 15px;
+    text-align: center;
+}
+
+.destination-card p {
+    padding: 0 15px 15px;
+    color: var(--secondary-gray);
+    text-align: center;
+}
+
+.explore-more-button {
+    display: block;
+    background-color: var(--primary-dark-green);
+    color: var(--primary-white);
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-more-button:hover {
+    background-color: #196f19;
+}
+
+/* قسم الأنشطة السياحية (Activities Highlights) */
+.activities-highlights {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.activities-highlights h2 {
+    font-size: 2em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.activities-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.activities-list li a {
+    text-decoration: none;
+    color: var(--secondary-gray);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.activities-list li a:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+}
+
+/* قسم آراء الزوار (Visitor Testimonials) */
+.testimonials {
+    padding: 60px 0;
+    background-color: var(--primary-white);
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.testimonial-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-slide img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-slide p {
+    color: var(--secondary-gray);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-slide span {
+    font-weight: bold;
+    color: var(--primary-dark-green);
+}
+
+/* قسم الخريطة التفاعلية (Interactive Map Section) */
+.interactive-map {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.interactive-map h2 {
+    font-size: 2em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-gray); /* لون مؤقت للخريطة */
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* لتمييز النقاط التفاعلية */
+}
+
+.map-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.map-point:hover {
+    transform: scale(1.2);
+}
+
+.map-point.riyadh {
+    top: 30%;
+    right: 40%;
+}
+
+.map-point.alula {
+    top: 20%;
+    right: 25%;
+}
+
+.map-point.jeddah {
+    top: 60%;
+    right: 15%;
+}
+
+/* تذييل الصفحة (Footer) */
+footer {
+    background-color: var(--primary-dark-green);
+    color: var(--primary-white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-nav ul li {
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: var(--primary-white);
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: var(--primary-gold);
+}
+
+.social-icons a {
+    color: var(--primary-white);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-gold);
+}
+
+.copyright p {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-white);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu li a {
+        text-align: center;
+    }
+
+    .auth-nav {
+        display: none; /* إخفاء روابط تسجيل الدخول في الوضع الرأسي */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .hero-image {
+        position: static;
+        height: 300px;
+    }
+
+    .hero-content {
+        position: static;
+        transform: none;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activities-list li {
+        margin: 10px 0;
+    }
+
+    .testimonials-slider {
+        padding: 20px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav ul li {
+        margin: 10px 0;
+    }
+}
+
+صفحة الرياض
+
+/* تصميم صفحة الرياض */
+
+/* عنوان الصفحة (Page Title Section) */
+.page-title-section {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-white);
+}
+
+.title-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.title-overlay p {
+    font-size: 1.2em;
+}
+
+/* قسم الوجهات السياحية داخل الرياض (Tourist Spots Grid) */
+.tourist-spots {
+    padding: 60px 0;
+    background-color: var(--primary-white);
+}
+
+.tourist-spots h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.spot-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.spot-card:hover {
+    transform: translateY(-5px);
+}
+
+.spot-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.spot-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-dark-green);
+    padding: 15px;
+    text-align: center;
+}
+
+.spot-card p {
+    padding: 0 15px 15px;
+    color: var(--secondary-gray);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.view-details-button {
+    display: block;
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+    background-color: #e0b800;
+}
+
+/* Modal لتفاصيل المعلم السياحي */
+.modal {
+    display: none; /* مخفي بشكل افتراضي */
+    position: fixed; /* يبقى في مكانه حتى عند التمرير */
+    z-index: 1; /* يجعله يظهر فوق العناصر الأخرى */
+    left: 0;
+    top: 0;
+    width: 100%; /* عرض كامل */
+    height: 100%; /* ارتفاع كامل */
+    overflow: auto; /* تمكين التمرير إذا كان المحتوى كبيرًا */
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية سوداء مع بعض الشفافية */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% من الأعلى ومركّز أفقيًا */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* يمكن تعديل العرض حسب الحاجة */
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.modal-body h2 {
+    color: var(--primary-dark-green);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-gallery #main-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.image-gallery .thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.image-gallery .thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.image-gallery .thumbnails img:hover,
+.image-gallery .thumbnails img.active {
+    opacity: 1;
+}
+
+.modal-body p {
+    color: var(--secondary-gray);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.modal-body h3 {
+    color: var(--primary-dark-green);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-body ul#modal-activities {
+    list-style: disc;
+    padding-right: 20px;
+    color: var(--secondary-gray);
+}
+
+.modal-body #modal-map {
+    height: 300px;
+    background-color: var(--light-gray); /* لون مؤقت للخريطة */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal-body .rating {
+    color: var(--primary-gold);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.modal-body #modal-comments {
+    color: var(--secondary-gray);
+    margin-bottom: 20px;
+}
+
+.modal-body .add-to-favorites-button {
+    background-color: var(--primary-gold);
+    color: var(--primary-dark-green);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-body .add-to-favorites-button:hover {
+    background-color: #e0b800;
+}
+
+/* تصميم متجاوب لصفحة الرياض */
+@media (max-width: 768px) {
+    .spots-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .title-overlay h1 {
+        font-size: 2.5em;
+    }
+
+    .title-overlay p {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .spots-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title-overlay h1 {
+        font-size: 2em;
+    }
+}
+
+/* تصميم صفحة العُلا */
+
+body {
+    /* استخدام خطوط أنيقة تعكس الطابع الأثري */
+    font-family: 'Amiri', serif; /* خط عربي أنيق */
+}
+
+:root {
+    --alula-sand: #F4E6D2; /* رمال فاتحة */
+    --alula-orange: #D2691E; /* برتقالي صحراوي */
+    --alula-green: #8FBC8F; /* أخضر واحات */
+}
+
+/* صورة الغلاف (Hero Section) */
+.hero-alula {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-white);
+}
+
+.hero-alula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay لتسهيل قراءة النص */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* معرض الوجهات السياحية (Destinations Grid) */
+.destinations-alula {
+    padding: 60px 0;
+    background-color: var(--alula-sand);
+}
+
+.destinations-alula h2 {
+    font-size: 2.5em;
+    color: var(--alula-orange);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.alula-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.alula-destinations-grid .destination-card {
+    background-color: var(--primary-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.alula-destinations-grid .destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.alula-destinations-grid .destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.alula-destinations-grid .destination-card h3 {
+    font-size: 1.7em;
+    color: var(--alula-orange);
+    padding: 15px;
+    text-align: center;
+}
+
+.alula-destinations-grid .destination-card p {
+    padding: 0 15px 15px;
+    color: var(--secondary-gray);
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.alula-destinations-grid .destination-card .view-details-button {
+    display: block;
+    background-color: var(--alula-orange);
+    color: var(--primary-white);
+    text-decoration: none;
+    padding: 12px 25px;
+    text-align: center;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alula-destinations-grid .destination-card .view-details-button:hover {
+    background-color: #b85a19;
+}
+
+/* تعديلات طفيفة على Modal ليتناسب مع تصميم العُلا */
+.modal-content {
+    border-color: var(--alula-orange);
+}
+
+.modal-body h2 {
+    color: var(--alula-orange);
+}
+
+.modal-body h3 {
+    color: var(--alula-orange);
+}
+
+.modal-body .add-to-favorites-button {
+    background-color: var(--alula-orange);
+    color: var(--primary-white);
+}
+
+.modal-body .add-to-favorites-button:hover {
+    background-color: #b85a19;
+}
+
+/* تصميم متجاوب لصفحة العُلا */
+@media (max-width: 768px) {
+    .hero-alula {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .alula-destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-alula {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .alula-destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تصميم صفحة جدة */
+
+body {
+    background-color: var(--primary-white);
+}
+
+:root {
+    --jeddah-blue: #0077BE; /* أزرق بحري */
+    --jeddah-white: #FFFFFF; /* أبيض */
+    --jeddah-gold: #FFD700; /* ذهبي */
+}
+
+/* صورة الغلاف (Hero Section) */
+.hero-jeddah {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--jeddah-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-jeddah::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 119, 190, 0.5); /* Overlay أزرق شفاف */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+}
+
+/* معرض الوجهات في جدة (Destinations Grid) */
+.destinations-jeddah {
+    padding: 60px 0;
+    background-color: var(--jeddah-white);
+}
+
+.destinations-jeddah h2 {
+    font-size: 2.5em;
+    color: var(--jeddah-blue);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.jeddah-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.jeddah-destinations-grid .destination-card {
+    background-color: var(--jeddah-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #eee; /* حدود خفيفة للبطاقات */
+}
+
+.jeddah-destinations-grid .destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.jeddah-destinations-grid .destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.jeddah-destinations-grid .destination-card h3 {
+    font-size: 1.7em;
+    color: var(--jeddah-blue);
+    padding: 15px;
+    text-align: center;
+}
+
+.jeddah-destinations-grid .destination-card p {
+    padding: 0 15px 15px;
+    color: var(--secondary-gray);
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.jeddah-destinations-grid .destination-card .view-details-button {
+    display: block;
+    background-color: var(--jeddah-blue);
+    color: var(--jeddah-white);
+    text-decoration: none;
+    padding: 12px 25px;
+    text-align: center;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.jeddah-destinations-grid .destination-card .view-details-button:hover {
+    background-color: #005a96;
+}
+
+/* تعديلات طفيفة على Modal ليتناسب مع تصميم جدة */
+.modal-content {
+    border-color: var(--jeddah-blue);
+}
+
+.modal-body h2 {
+    color: var(--jeddah-blue);
+}
+
+.modal-body h3 {
+    color: var(--jeddah-blue);
+}
+
+.modal-body .add-to-favorites-button {
+    background-color: var(--jeddah-blue);
+    color: var(--jeddah-white);
+}
+
+.modal-body .add-to-favorites-button:hover {
+    background-color: #005a96;
+}
+
+/* أنماط تصميمية إضافية (يمكن تطويرها) */
+.destinations-jeddah {
+    /* مثال على إضافة خلفية بنمط أمواج خفيفة */
+    /* background-image: url('../images/wave-pattern.png'); */
+    /* background-repeat: repeat-x; */
+    /* background-position: bottom; */
+}
+
+/* تصميم متجاوب لصفحة جدة */
+@media (max-width: 768px) {
+    .hero-jeddah {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .jeddah-destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-jeddah {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .jeddah-destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page-title-section {
+    position: relative;
+    /* تم إزالة تحديد ارتفاع ثابت */
+    min-height: 400px; /* يمكنك تعديل هذا الارتفاع الأدنى حسب الحاجة */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-white);
+    padding: 50px 20px; /* إضافة بعض الحشو الرأسي لضمان ظهور النص بشكل جيد */
+    text-align: center; /* توسيط النص */
+}
+
+.title-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 90%; /* تحديد عرض أقصى للنص */
+}
+
+.title-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.title-overlay p {
+    font-size: 1.2em;
+}
+
+/* تصميم متجاوب لصفحة الرياض */
+@media (max-width: 768px) {
+    .page-title-section {
+        min-height: 250px; /* تقليل الارتفاع الأدنى على الهواتف */
+        padding: 30px 15px;
+    }
+
+    .title-overlay h1 {
+        font-size: 2.5em;
+    }
+
+    .title-overlay p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title-section {
+        min-height: 200px; /* تقليل الارتفاع الأدنى على الهواتف الأصغر */
+    }
+
+    .title-overlay h1 {
+        font-size: 2em;
+    }
+}
+
+
+
+
+
+

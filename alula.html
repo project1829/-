@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكتشف العُلا - استكشف السعودية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/alula.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Kufam:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="شعار استكشف السعودية"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="destinations.html">الوجهات <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="riyadh.html">الرياض</a></li>
+                            <li><a href="alula.html">العُلا</a></li>
+                            <li><a href="jeddah.html">جدة</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="auth-nav">
+                <a href="login.html">تسجيل الدخول</a> / <a href="register.html">إنشاء حساب</a>
+                <a href="favorites.html" class="favorite"><i class="fas fa-heart"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-alula" style="background-image: url('images/alula-hero.jpg');">
+        <div class="hero-content">
+            <h1>اكتشف العُلا – قلب التاريخ ونبض الصحراء</h1>
+            <p>العُلا، موطن الحضارات القديمة، ومتحف مفتوح في الهواء الطلق.</p>
+        </div>
+    </section>
+
+    <section class="destinations-alula">
+        <div class="container">
+            <h2>أبرز المعالم في العُلا</h2>
+            <div class="alula-destinations-grid">
+                <div class="destination-card" data-spot-id="madain-saleh">
+                    <img src="images/alula-madain-saleh.jpg" alt="مدائن صالح">
+                    <h3>مدائن صالح</h3>
+                    <p>أول موقع سعودي يُدرج في قائمة التراث العالمي لليونسكو.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="destination-card" data-spot-id="elephant-rock">
+                    <img src="images/alula-elephant-rock.jpg" alt="صخرة الفيل">
+                    <h3>صخرة الفيل</h3>
+                    <p>تكوين صخري طبيعي فريد يشبه الفيل.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="destination-card" data-spot-id="al-hijr">
+                    <img src="images/alula-al-hijr.jpg" alt="الحِجر">
+                    <h3>الحِجر</h3>
+                    <p>مدينة نبطية قديمة تضم مقابر منحوتة بشكل مذهل.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="destination-card" data-spot-id="al-balad-al-qadeemah">
+                    <img src="images/alula-old-town.jpg" alt="البلدة القديمة">
+                    <h3>البلدة القديمة</h3>
+                    <p>مجموعة من المنازل الطينية القديمة المتراصة.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="destination-card" data-spot-id="alula-oasis">
+                    <img src="images/alula-oasis.jpg" alt="واحة العُلا">
+                    <h3>واحة العُلا</h3>
+                    <p>مساحات خضراء مورقة وأشجار نخيل وسط الصحراء.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="spot-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2 id="modal-title"></h2>
+            <div class="modal-body">
+                <div class="image-gallery">
+                    <img id="main-image" src="" alt="">
+                    <div class="thumbnails">
+                        </div>
+                </div>
+                <p id="modal-description"></p>
+                <h3>الأنشطة المتوفرة</h3>
+                <ul id="modal-activities">
+                    </ul>
+                <h3>الموقع على الخريطة</h3>
+                <div id="modal-map">
+                    </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (4.5)
+                </div>
+                <h3>تقييم الزوار</h3>
+                <div id="modal-comments">
+                    </div>
+                <button class="add-to-favorites-button"><i class="fas fa-heart"></i> أضف إلى المفضلة</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">الوجهات</a></li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">إنشاء حساب</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/alula.js"></script>
+</body>
+</html>

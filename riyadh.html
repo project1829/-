@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكتشف الرياض - استكشف السعودية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/riyadh.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="شعار استكشف السعودية"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="dropdown">
+                        <a href="destinations.html">الوجهات <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="riyadh.html">الرياض</a></li>
+                            <li><a href="alula.html">العُلا</a></li>
+                            <li><a href="jeddah.html">جدة</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="auth-nav">
+                <a href="login.html">تسجيل الدخول</a> / <a href="register.html">إنشاء حساب</a>
+                <a href="favorites.html" class="favorite"><i class="fas fa-heart"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-title-section" style="background-image: url('images/riyadh-banner.jpg');">
+        <div class="title-overlay">
+            <h1>اكتشف الرياض</h1>
+            <p>بوابة التاريخ، قلب الحداثة، وملتقى الثقافة في المملكة</p>
+        </div>
+    </section>
+
+    <section class="tourist-spots">
+        <div class="container">
+            <h2>أهم المعالم في الرياض</h2>
+            <div class="spots-grid">
+                <div class="spot-card" data-spot-id="masmak-fort">
+                    <img src="images/riyadh-masmak-fort.jpg" alt="قصر المصمك">
+                    <h3>قصر المصمك</h3>
+                    <p>حصن تاريخي يمثل نقطة انطلاق توحيد المملكة.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="spot-card" data-spot-id="kingdom-center">
+                    <img src="images/riyadh-kingdom-center.jpg" alt="برج المملكة">
+                    <h3>برج المملكة</h3>
+                    <p>أحد أبرز المعالم المعمارية الحديثة في الرياض.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="spot-card" data-spot-id="national-museum">
+                    <img src="images/riyadh-national-museum.jpg" alt="المتحف الوطني">
+                    <h3>المتحف الوطني</h3>
+                    <p>يستعرض تاريخ وثقافة المملكة العربية السعودية.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="spot-card" data-spot-id="diriyah">
+                    <img src="images/riyadh-diriyah.jpg" alt="الدرعية التاريخية">
+                    <h3>الدرعية التاريخية</h3>
+                    <p>مهد الدولة السعودية الأولى وموقع تراث عالمي لليونسكو.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="spot-card" data-spot-id="wadi-hanifa">
+                    <img src="images/riyadh-wadi-hanifa.jpg" alt="وادي حنيفة">
+                    <h3>وادي حنيفة</h3>
+                    <p>واحة طبيعية ووجهة ترفيهية مميزة في قلب المدينة.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+                <div class="spot-card" data-spot-id="skybridge">
+                    <img src="images/riyadh-skybridge.jpg" alt="جسر المشاهدة في برج المملكة">
+                    <h3>جسر المشاهدة</h3>
+                    <p>إطلالة بانورامية رائعة على مدينة الرياض من أعلى برج المملكة.</p>
+                    <button class="view-details-button">عرض التفاصيل</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="spot-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="modal-body">
+                <div class="image-gallery">
+                    <img id="main-image" src="" alt="">
+                    <div class="thumbnails">
+                        </div>
+                </div>
+                <p id="modal-description"></p>
+                <h3>الأنشطة المتاحة</h3>
+                <ul id="modal-activities">
+                    </ul>
+                <h3>الموقع على الخريطة</h3>
+                <div id="modal-map">
+                    </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> (4.0)
+                </div>
+                <h3>تعليقات الزوار</h3>
+                <div id="modal-comments">
+                    </div>
+                <button class="add-to-favorites-button"><i class="fas fa-heart"></i> أضف إلى المفضلة</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">الوجهات</a></li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                    <li><a href="login.html">تسجيل الدخول</a></li>
+                    <li><a href="register.html">إنشاء حساب</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/riyadh.js"></script>
+</body>
+</html>

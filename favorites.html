@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المفضلة - استكشف السعودية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/favorites.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="شعار استكشف السعودية"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">الوجهات</a></li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="user-nav">
+                <span class="user-account">اسم المستخدم</span>
+                <button class="logout-button">تسجيل الخروج</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="favorites-header">
+        <div class="container">
+            <h1>وجهاتي المفضلة</h1>
+            <p class="sub-description">هنا تجد الأماكن التي لفتت انتباهك – يمكنك زيارتها لاحقًا أو مشاركتها مع الأصدقاء!</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="ابحث باسم الوجهة...">
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="city-filter">المدينة:</label>
+                    <select id="city-filter">
+                        <option value="">الكل</option>
+                        <option value="الرياض">الرياض</option>
+                        <option value="العُلا">العُلا</option>
+                        <option value="جدة">جدة</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="activity-filter">نوع النشاط:</label>
+                    <select id="activity-filter">
+                        <option value="">الكل</option>
+                        <option value="تاريخي">تاريخي</option>
+                        <option value="طبيعي">طبيعي</option>
+                        <option value="ترفيهي">ترفيهي</option>
+                        <option value="تسوق">تسوق</option>
+                        <option value="متاحف">متاحف</option>
+                        <option value="مطاعم بحرية">مطاعم بحرية</option>
+                        <option value="تجول">تجول</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="favorites-list">
+        <div class="container">
+            <div class="favorites-grid" id="favorites-grid">
+                <div class="empty-favorites" id="empty-favorites">
+                    <img src="images/empty-favorites.png" alt="قائمة المفضلة فارغة">
+                    <p>قائمتك المفضلة فارغة!</p>
+                    <a href="destinations.html" class="explore-button">ابدأ الاستكشاف الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="destinations.html">الوجهات</a></li>
+                    <li><a href="about-us.html">من نحن</a></li>
+                    <li><a href="contact-us.html">تواصل معنا</a></li>
+                    <li><a href="privacy-policy.html">سياسات الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html>
